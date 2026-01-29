@@ -1,101 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
 
-<title>Myth vs Fact Quiz</title>
+    <title>Myth vs Fact Quiz</title>
 </head>
-<body>
- <h1>Myth vs Fact Quiz</h1>
- <h2>Mental Health Edition</h2>
-    <p>Test your knowledge and bust common myths!</p>
-    <!-- Home Section -->
-<section id="home">
-    <h2>Home</h2>
-    <p>
-        Welcome to the Myth vs Fact Quiz!  
-        Read each statement carefully and decide whether it’s a myth or a fact.
-    </p>
 
-    <ul>
-        <li>Myth vs Fact Quiz</li>
-        <li>Casual Mode (no timer)</li>
-        <li>Speed Mode (5 second timer)</li>
-        <li>Hardcore Mode (3 second timer)</li>
-    </ul>
-    <hr>
-    <ul>
+<body class="d-flex flex-column min-vh-100">
+    <section id="header" class="section">
+        <div class="header-content text-center">
+            <h1>Myth vs Fact Quiz</h1>
+            <h2>Mental Health Edition</h2>
+            <p>Test your knowledge and bust common myths!</p>
+        </div>
+    </section>
+    <!-- Home Section -->
+    <section id="home" class="section container">
+        <h2>Home</h2>
+        <p>
+            Welcome to the Myth vs Fact Quiz!
+            Read each statement carefully and decide whether it's a myth or a fact.
+        </p>
+
+        <ul>
+            <li>Myth vs Fact Quiz</li>
+            <li>Casual Mode (no timer)</li>
+            <li>Speed Mode (5 second timer)</li>
+            <li>Hardcore Mode (3 second timer)</li>
+        </ul>
+        <hr>
+        <ul>
             <li>Sound</li>
             <li>Keyboard Mode (3 second timer)</li>
             <li>Reduced Motion</li>
-    </ul>
-    <button>Start Quiz</button>
-</section>
+        </ul>
+        <button>Start Quiz</button>
+    </section>
 
-<!-- Quiz Section -->
-<section id="quiz">
-    <h2>Quiz</h2>
+    <!-- Quiz Section -->
+    <section id="quiz" class="section container">
+        <h2>Quiz</h2>
 
-    <div class="question">
-         <button>Myth</button>
-    <button>Fact</button>
-        <button>Next</button>
-        
-    
-    </div>
+        <div class="question row">
+            <button id="myth" class="col-12 col-md-4 offset-md-2">Myth</button>
+            <button id="fact" class="col-12 col-md-4">Fact</button>
+            <button id="next" class="col-12 col-md-4 offset-md-4">Next</button>
 
-   
-    
-</section>
 
-<!-- Results Section -->
-<section id="results">
-    <h5>Results</h5>
-    <p>Final Score:</p>
-    <hr>
-    <p>Accuracy</p>
-    <hr>
-    <h5>Category</h5>
-    <p>Anxiety</p>
-    <p>Depression</p>
-    <p>Therapy</p>
-    <p>Stress</p>
-    
-    
-    
-    <button>Review Missed</button>
-    <button>Play Again</button>
-    <button>Share Result</button>
-</section>
+        </div>
 
-<!-- Reviews Section -->
-<section id="reviews">
-    <h5>Review Missed</h5>
-    <p>Statement</p>
-    <hr>
-    <h5>"Depression is a sign of weakness"</h5>
-    <hr>
-    <p>Correct Answer: Myth</p>
-    <hr>
-    <p>Your Answer: Fact</p>
-    <hr>
-    <p>Depression is a medical conddtion no a character flaw.</p>
-    <hr>
-     <button>Review Missed</button>
-    <button>Back to Results</button>
-    
-</section>
 
-<footer>
-   
-</footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section container">
+        <h2>Results</h2>
+        <p>Final Score:</p>
+        <hr>
+        <p>Accuracy</p>
+        <hr>
+        <h5>Category</h5>
+        <p>Anxiety</p>
+        <p>Depression</p>
+        <p>Therapy</p>
+        <p>Stress</p>
+
+
+
+        <button>Review Missed</button>
+        <button>Play Again</button>
+        <button>Share Result</button>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section container">
+        <h2>Review Missed</h2>
+        <p>Statement</p>
+        <hr>
+        <h5>"Depression is a sign of weakness"</h5>
+        <hr>
+        <p>Correct Answer: Myth</p>
+        <hr>
+        <p>Your Answer: Fact</p>
+        <hr>
+        <p>Depression is a medical condition, not a character flaw.</p>
+        <hr>
+        <button>Review Missed</button>
+        <button>Back to Results</button>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
