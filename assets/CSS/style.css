@@ -1,13 +1,82 @@
 :root {
     --color-primary: #5a4e8c; /* Purple */
     --color-secondary: #c9bce6; /* Light Purple */
-    --color-highlight: #7ed9a0; /* Bright Green */
+    --color-highlight: #2ecc71; /* Bright Green */
     --color-highlight-light: #c45a8a; /* Light Pink */
+    --background-colour: #f5f2fa; /* Very Light Purple */
 }
 
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f2fa;
+    background-color: var(--color-secondary);
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: var(--background-colour);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(90, 78, 140, 0.1);
+}
+
+h1,
+h2,
+h5 {
+    color: var(--color-primary);
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+/* Hide Sections Initially */
+.hide {
+    display: none;
+}
+
+/* header Styles */
+#header {
+    margin: 0px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-radius: 0px !important;
+}
+
+/* Button Styles */
+button {
+    border: 3px solid var(--color-primary);
+    padding: 7px 25px;
+    color: var(--color-primary);
+    margin: 5px;
+    min-width: 244px;
+}
+
+button:hover {
+    background-color: var(--color-primary);
+    color: var(--background-colour);
+}
+
+#myth {
+    border: 3px solid var(--color-highlight-light);
+    color: var(--color-highlight-light);
+}
+
+#myth:hover {
+    background-color: var(--color-highlight-light);
+    color: var(--background-colour);
+}
+
+#fact {
+    border: 3px solid var(--color-highlight);
+    color: var(--color-highlight);
+}
+
+#fact:hover {
+    background-color: var(--color-highlight);
+    color: var(--background-colour);
 }

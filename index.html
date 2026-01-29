@@ -13,20 +13,20 @@
     <title>Myth vs Fact Quiz</title>
 </head>
 
-<body>
-    <section>
-        <div class="header">
+<body class="d-flex flex-column min-vh-100">
+    <section id="header" class="section">
+        <div class="header-content text-center">
             <h1>Myth vs Fact Quiz</h1>
             <h2>Mental Health Edition</h2>
             <p>Test your knowledge and bust common myths!</p>
         </div>
     </section>
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" class="section container">
         <h2>Home</h2>
         <p>
             Welcome to the Myth vs Fact Quiz!
-            Read each statement carefully and decide whether it’s a myth or a fact.
+            Read each statement carefully and decide whether it's a myth or a fact.
         </p>
 
         <ul>
@@ -45,13 +45,13 @@
     </section>
 
     <!-- Quiz Section -->
-    <section id="quiz">
+    <section id="quiz" class="section container">
         <h2>Quiz</h2>
 
-        <div class="question">
-            <button>Myth</button>
-            <button>Fact</button>
-            <button>Next</button>
+        <div class="question row">
+            <button id="myth" class="col-12 col-md-4 offset-md-2">Myth</button>
+            <button id="fact" class="col-12 col-md-4">Fact</button>
+            <button id="next" class="col-12 col-md-4 offset-md-4">Next</button>
 
 
         </div>
@@ -61,8 +61,8 @@
     </section>
 
     <!-- Results Section -->
-    <section id="results">
-        <h5>Results</h5>
+    <section id="results" class="section container">
+        <h2>Results</h2>
         <p>Final Score:</p>
         <hr>
         <p>Accuracy</p>
@@ -81,8 +81,8 @@
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews">
-        <h5>Review Missed</h5>
+    <section id="reviews" class="section container">
+        <h2>Review Missed</h2>
         <p>Statement</p>
         <hr>
         <h5>"Depression is a sign of weakness"</h5>
