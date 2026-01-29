@@ -34,7 +34,7 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Hide Sections Initially */
+/* Hide Sections */
 .hide {
     display: none;
 }
