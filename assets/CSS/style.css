@@ -1,0 +1,13 @@
+:root {
+    --color-primary: #5a4e8c; /* Purple */
+    --color-secondary: #c9bce6; /* Light Purple */
+    --color-highlight: #7ed9a0; /* Bright Green */
+    --color-highlight-light: #c45a8a; /* Light Pink */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f2fa;
+}
