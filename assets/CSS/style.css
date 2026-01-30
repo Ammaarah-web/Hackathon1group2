@@ -80,3 +80,40 @@ button:hover {
     background-color: var(--color-highlight);
     color: var(--background-colour);
 }
+
+.start-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    margin-top: 25px;
+}
+
+.start-btn.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.next-btn {
+    border: 3px solid var(--color-highlight);
+    color: var(--color-highlight);
+}
+
+.next-btn:hover {
+    background-color: var(--color-highlight);
+    color: var(--background-colour);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Share Menu Buttons */
+#shareMenu button {
+    border: 3px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+#shareMenu button:hover {
+    background-color: var(--color-primary);
+    color: var(--background-colour);
+}
