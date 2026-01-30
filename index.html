@@ -41,60 +41,52 @@
             <li>Keyboard Mode (3 second timer)</li>
             <li>Reduced Motion</li>
         </ul>
-        <button>Start Quiz</button>
+        <button id="startBtn" class="start-button">Start Quiz</button>
     </section>
 
     <!-- Quiz Section -->
-    <section id="quiz" class="section container">
+    <section id="quiz" class="section container hidden">
         <h2>Quiz</h2>
 
         <div class="question row">
             <button id="myth" class="col-12 col-md-4 offset-md-2">Myth</button>
             <button id="fact" class="col-12 col-md-4">Fact</button>
-            <button id="next" class="col-12 col-md-4 offset-md-4">Next</button>
-
+            <button id="next" class="next-btncol-12 col-md-4 offset-md-4">Next</button>
 
         </div>
-
-
 
     </section>
 
     <!-- Results Section -->
-    <section id="results" class="section container">
+    <section id="results" class="section container hidden">
         <h2>Results</h2>
-        <p>Final Score:</p>
+        <p id="finalScore">Final Score:</p>
         <hr>
-        <p>Accuracy</p>
+        <!--p>Accuracy</p>
         <hr>
         <h5>Category</h5>
         <p>Anxiety</p>
         <p>Depression</p>
         <p>Therapy</p>
-        <p>Stress</p>
+        <p>Stress</p-->
 
+        <button id="reviewMissed">Review Missed</button>
+        <button id="playAgain">Play Again</button>
+        <button id="shareResult">Share Result</button>
+        <div id="shareMenu" class="hidden">
+            <button id="copyShare">Copy to Clipboard</button>
+            <button id="whatsappShare">WhatsApp</button>
+            <button id="twitterShare">Twitter</button>
+            <button id="emailShare">Email</button>
+        </div>
 
-
-        <button>Review Missed</button>
-        <button>Play Again</button>
-        <button>Share Result</button>
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="section container">
+    <section id="reviews" class="section container hidden">
         <h2>Review Missed</h2>
-        <p>Statement</p>
-        <hr>
-        <h5>"Depression is a sign of weakness"</h5>
-        <hr>
-        <p>Correct Answer: Myth</p>
-        <hr>
-        <p>Your Answer: Fact</p>
-        <hr>
-        <p>Depression is a medical condition, not a character flaw.</p>
-        <hr>
-        <button>Review Missed</button>
-        <button>Back to Results</button>
+        <div class="review-list mt-3"></div>
+        <button id="backToResults" class="mt-3">Back to Results</button>
 
     </section>
 
@@ -104,6 +96,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="assets/JS/script.js"></script>
 </body>
 
 </html>
