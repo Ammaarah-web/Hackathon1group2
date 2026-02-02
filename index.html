@@ -51,11 +51,22 @@
         <div class="question row">
             <button id="myth" class="col-12 col-md-4 offset-md-2">Myth</button>
             <button id="fact" class="col-12 col-md-4">Fact</button>
+            <button id="next" class="next-btn col-12 col-md-4 offset-md-4">Next</button>
+    <!-- Modal Pop-up -->
+    <div id="infoModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3 id="modalTitle">Mental Health Information</h3>
+            <p id="modalInfo"></p>
+            <button id="modalNext" class="modal-button">Continue to Next Question</button>
+        </div>
+    </div>
             <button id="next" class="next-btncol-12 col-md-4 offset-md-4">Next</button>
 
         </div>
 
     </section>
+
 
     <!-- Results Section -->
     <section id="results" class="section container hidden">

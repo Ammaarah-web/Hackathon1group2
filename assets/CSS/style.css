@@ -107,6 +107,89 @@ button:hover {
     display: none;
 }
 
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: var(--background-colour);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 8px 16px rgba(90, 78, 140, 0.3);
+    position: relative;
+    border: 3px solid var(--color-primary);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 0;
+    min-width: auto;
+    margin: 0;
+}
+
+.modal-close:hover {
+    color: var(--color-highlight-light);
+}
+
+#modalTitle {
+    margin-top: 0;
+    color: var(--color-primary);
+}
+
+#modalInfo {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.modal-button {
+    width: 100%;
+    margin-top: 20px;
+    border: 3px solid var(--color-primary);
+    padding: 10px;
+    color: var(--color-primary);
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* Share Menu Buttons */
 #shareMenu button {
     border: 3px solid var(--color-primary);
