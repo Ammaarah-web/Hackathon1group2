@@ -27,11 +27,31 @@ const questions = [
         correct: "fact",
         info: "Reaching out for help demonstrates self-awareness and courage. Whether it's talking to a therapist, counselor, or trusted person, asking for support is an important step toward wellness and recovery.",
     },
-    { text: "Depression is a sign of weakness.", correct: "myth" },
-    { text: "Talking about mental health can help recovery.", correct: "fact" },
-    { text: "Stress always has negative effects.", correct: "myth" },
-    { text: "Mental health conditions are medical issues.", correct: "fact" },
-    { text: "Asking for help shows strength.", correct: "fact" },
+    {
+        text: "Depression is a sign of weakness.",
+        correct: "myth",
+        info: "Depression can affect anyone and is influenced by brain chemistry, life events, and genetics. It is treatable, and seeking support is a healthy response.",
+    },
+    {
+        text: "Talking about mental health can help recovery.",
+        correct: "fact",
+        info: "Open conversations reduce stigma and help people feel less alone. Sharing with trusted people or professionals can improve coping and recovery outcomes.",
+    },
+    {
+        text: "Stress always has negative effects.",
+        correct: "myth",
+        info: "Short-term stress can be helpful and energizing, but long-term stress can harm sleep, mood, and health. Healthy coping skills can reduce its impact.",
+    },
+    {
+        text: "Mental health conditions are medical issues.",
+        correct: "fact",
+        info: "They involve changes in mood, thinking, or behavior and can be diagnosed and treated. Early care can prevent symptoms from worsening.",
+    },
+    {
+        text: "Asking for help shows strength.",
+        correct: "fact",
+        info: "Reaching out is a proactive step that builds resilience. Support can come from friends, family, counselors, or hotlines.",
+    },
 ];
 
 let currentQuestion = 0;
