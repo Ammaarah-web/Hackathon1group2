@@ -42,6 +42,7 @@ const quizSection = document.getElementById("quiz");
 const resultsSection = document.getElementById("results");
 const reviewsSection = document.getElementById("reviews");
 
+const restartBtn = document.getElementById("restartIcon");
 const mythBtn = document.getElementById("myth");
 const factBtn = document.getElementById("fact");
 const nextBtn = document.getElementById("next");
@@ -220,6 +221,20 @@ backToResultsBtn.addEventListener("click", () => {
 // PLAY AGAIN
 // =====================
 playAgainBtn.addEventListener("click", () => {
+    currentQuestion = 0;
+    score = 0;
+    userAnswers = [];
+
+    resultsSection.classList.add("hidden");
+    reviewsSection.classList.add("hidden");
+    quizSection.classList.add("hidden");
+    homeSection.classList.remove("hidden");
+
+    startBtn.classList.remove("show");
+    setTimeout(() => startBtn.classList.add("show"), 200);
+});
+
+restartBtn.addEventListener("click", () => {
     currentQuestion = 0;
     score = 0;
     userAnswers = [];
