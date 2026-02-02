@@ -92,17 +92,6 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
-
-.next-btn {
-    border: 3px solid var(--color-highlight);
-    color: var(--color-highlight);
-}
-
-.next-btn:hover {
-    background-color: var(--color-highlight);
-    color: var(--background-colour);
-}
-
 .hidden {
     display: none;
 }
