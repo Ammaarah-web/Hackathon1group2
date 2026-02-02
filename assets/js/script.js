@@ -27,6 +27,11 @@ const questions = [
         correct: "fact",
         info: "Reaching out for help demonstrates self-awareness and courage. Whether it's talking to a therapist, counselor, or trusted person, asking for support is an important step toward wellness and recovery."
     }
+    { text: "Depression is a sign of weakness.", correct: "myth" },
+    { text: "Talking about mental health can help recovery.", correct: "fact" },
+    { text: "Stress always has negative effects.", correct: "myth" },
+    { text: "Mental health conditions are medical issues.", correct: "fact" },
+    { text: "Asking for help shows strength.", correct: "fact" },
 ];
 
 let currentQuestion = 0;
