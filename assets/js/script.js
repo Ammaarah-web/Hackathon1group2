@@ -55,7 +55,6 @@ const questions = [
 ];
 
 let currentQuestion = 0;
-let ableScore = "";
 let score = 0;
 let userAnswers = [];
 
@@ -131,18 +130,26 @@ startBtn.addEventListener("click", () => {
 // HANDLE ANSWERS
 // =====================
 function handleAnswer(answer) {
-    userAnswers[currentQuestion] = answer;
-    if (ableScore == true) {
-        if (answer === questions[currentQuestion].correct) {
-            score++;
-            ableScore = false;
-        }
+    if (answer == questions[currentQuestion].correct) {
+        score++;
+        ableScore = false;
     }
-    nextBtn.disabled = false;
+    mythBtn.classList.remove("mythActive");
+    factBtn.classList.remove("factActive");
 }
 
-mythBtn.addEventListener("click", () => handleAnswer("myth"));
-factBtn.addEventListener("click", () => handleAnswer("fact"));
+mythBtn.addEventListener("click", () => {
+    userAnswers[currentQuestion] = "myth";
+    mythBtn.classList.add("mythActive");
+    factBtn.classList.remove("factActive");
+    nextBtn.disabled = false;
+});
+factBtn.addEventListener("click", () => {
+    userAnswers[currentQuestion] = "fact";
+    factBtn.classList.add("factActive");
+    mythBtn.classList.remove("mythActive");
+    nextBtn.disabled = false;
+});
 
 // =====================
 // NEXT QUESTION
@@ -175,6 +182,7 @@ nextBtn.addEventListener("click", () => {
         alert("Please choose Myth or Fact before continuing.");
         return;
     }
+    handleAnswer(userAnswers[currentQuestion]);
     showModal();
 });
 
