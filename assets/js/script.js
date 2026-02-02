@@ -27,31 +27,6 @@ const questions = [
         correct: "fact",
         info: "Reaching out for help demonstrates self-awareness and courage. Whether it's talking to a therapist, counselor, or trusted person, asking for support is an important step toward wellness and recovery.",
     },
-    {
-        text: "Depression is a sign of weakness.",
-        correct: "myth",
-        info: "Depression can affect anyone and is influenced by brain chemistry, life events, and genetics. It is treatable, and seeking support is a healthy response.",
-    },
-    {
-        text: "Talking about mental health can help recovery.",
-        correct: "fact",
-        info: "Open conversations reduce stigma and help people feel less alone. Sharing with trusted people or professionals can improve coping and recovery outcomes.",
-    },
-    {
-        text: "Stress always has negative effects.",
-        correct: "myth",
-        info: "Short-term stress can be helpful and energizing, but long-term stress can harm sleep, mood, and health. Healthy coping skills can reduce its impact.",
-    },
-    {
-        text: "Mental health conditions are medical issues.",
-        correct: "fact",
-        info: "They involve changes in mood, thinking, or behavior and can be diagnosed and treated. Early care can prevent symptoms from worsening.",
-    },
-    {
-        text: "Asking for help shows strength.",
-        correct: "fact",
-        info: "Reaching out is a proactive step that builds resilience. Support can come from friends, family, counselors, or hotlines.",
-    },
 ];
 
 let currentQuestion = 0;
@@ -67,6 +42,7 @@ const quizSection = document.getElementById("quiz");
 const resultsSection = document.getElementById("results");
 const reviewsSection = document.getElementById("reviews");
 
+const restartBtn = document.getElementById("restartIcon");
 const mythBtn = document.getElementById("myth");
 const factBtn = document.getElementById("fact");
 const nextBtn = document.getElementById("next");
@@ -185,12 +161,14 @@ nextBtn.addEventListener("click", () => {
         alert("Please choose Myth or Fact before continuing.");
         return;
     }
-    handleAnswer(userAnswers[currentQuestion]);
     showModal();
 });
 
 closeModalBtn.addEventListener("click", closeModal);
-modalNextBtn.addEventListener("click", proceedToNextQuestion);
+modalNextBtn.addEventListener("click", () => {
+    handleAnswer(userAnswers[currentQuestion]);
+    proceedToNextQuestion();
+});
 
 // =====================
 // SHOW RESULTS
@@ -243,6 +221,20 @@ backToResultsBtn.addEventListener("click", () => {
 // PLAY AGAIN
 // =====================
 playAgainBtn.addEventListener("click", () => {
+    currentQuestion = 0;
+    score = 0;
+    userAnswers = [];
+
+    resultsSection.classList.add("hidden");
+    reviewsSection.classList.add("hidden");
+    quizSection.classList.add("hidden");
+    homeSection.classList.remove("hidden");
+
+    startBtn.classList.remove("show");
+    setTimeout(() => startBtn.classList.add("show"), 200);
+});
+
+restartBtn.addEventListener("click", () => {
     currentQuestion = 0;
     score = 0;
     userAnswers = [];

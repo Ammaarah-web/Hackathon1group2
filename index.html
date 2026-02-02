@@ -46,17 +46,20 @@
 
     <!-- Quiz Section -->
     <section id="quiz" class="section container hidden">
-        <h2>Quiz</h2>
+        <div class="row mb-3">
+            <i id="restartIcon" class="fa-solid fa-arrow-rotate-left"></i>
+            <h2>Quiz</h2>
+        </div>
 
-        <div class="question row">
-            <button id="myth" class="col-12 col-md-4 offset-md-2">Myth</button>
-            <button id="fact" class="col-12 col-md-4">Fact</button>
-            <button id="next" class="next-btn col-12 col-md-4 offset-md-4">Next</button>
-            <p id="questionNumber" class="col-12 text-center mt-2"></p>
+        <div class="question row align-content-center text-center">
+            <button id="myth" class="col-11 offset-md-2 col-md-4 mt-3">Myth</button>
+            <button id="fact" class="col-11 col-md-4 mt-3">Fact</button>
+            <button id="next" class="col-11 next-btn col-md-4 offset-md-4 mt-3">Next</button>
+            <p id="questionNumber" class="mt-2"></p>
             <!-- Modal Pop-up -->
             <div id="infoModal" class="modal-overlay hidden">
                 <div class="modal-content">
-                    <button class="modal-close" id="closeModal">&times;</button>
+                    <i id="closeModal" class="fa-solid fa-x modal-close"></i>
                     <h3 id="modalTitle">Mental Health Information</h3>
                     <p id="modalInfo"></p>
                     <button id="modalNext" class="modal-button">Continue to Next Question</button>
@@ -104,6 +107,7 @@
 
     </footer>
 
+    <script src="https://kit.fontawesome.com/6c5ac60dda.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
