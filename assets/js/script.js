@@ -55,6 +55,7 @@ const questions = [
 ];
 
 let currentQuestion = 0;
+let ableScore = "";
 let score = 0;
 let userAnswers = [];
 
@@ -107,6 +108,7 @@ function loadQuestion() {
     questionContainer.prepend(questionText);
 
     nextBtn.disabled = true;
+    ableScore = true;
 }
 
 // =====================
@@ -130,7 +132,12 @@ startBtn.addEventListener("click", () => {
 // =====================
 function handleAnswer(answer) {
     userAnswers[currentQuestion] = answer;
-    if (answer === questions[currentQuestion].correct) score++;
+    if (ableScore == true) {
+        if (answer === questions[currentQuestion].correct) {
+            score++;
+            ableScore = false;
+        }
+    }
     nextBtn.disabled = false;
 }
 
