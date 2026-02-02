@@ -88,6 +88,8 @@ const modalNextBtn = document.getElementById("modalNext");
 const modalTitle = document.getElementById("modalTitle");
 const modalInfo = document.getElementById("modalInfo");
 
+const questionNumber = document.getElementById("questionNumber");
+
 // =====================
 // LOAD QUESTION
 // =====================
@@ -108,6 +110,7 @@ function loadQuestion() {
 
     nextBtn.disabled = true;
     ableScore = true;
+    questionNumber.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
 }
 
 // =====================
